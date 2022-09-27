@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_tread1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="72sp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_tread2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="72sp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@id/tv_tread1"
+        app:layout_constraintEnd_toEndOf="@id/tv_tread1"
+        app:layout_constraintTop_toBottomOf="@id/tv_tread1"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:text="start"
+        android:textSize="36sp"
+        android:gravity="center"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/tv_tread2"
+        app:layout_constraintStart_toStartOf="@id/tv_tread2"
+        app:layout_constraintEnd_toEndOf="@id/tv_tread2"
+        app:layout_constraintBottom_toTopOf="@id/btn_pause"
+        />
+    <Button
+        android:id="@+id/btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:text="pause"
+        android:textSize="36sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_start"
+        app:layout_constraintStart_toStartOf="@id/btn_start"
+        app:layout_constraintEnd_toEndOf="@id/btn_start"
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+
+        />
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:text="reset"
+        android:textSize="36sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_pause"
+        app:layout_constraintStart_toStartOf="@id/btn_pause"
+        app:layout_constraintEnd_toEndOf="@id/btn_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_decrease"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_media_previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_increase"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_media_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
